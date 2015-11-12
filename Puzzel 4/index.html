@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Puzzel 1</title>
+	<script>
+		var aankoopbedrag = parseInt(prompt("Wat is het aankoopbedrag?"));
+		var totaalbedrag = aankoopbedrag + 3.95;
+		var gratisverzenden = aankoopbedrag;
+
+		if (aankoopbedrag => 25) {
+			alert("De verzendkosten zijn gratis. Het totaalbedrag komt op €"+gratisverzenden+"");
+		}
+		if (aankoopbedrag < 25) {
+			alert("U moet verzendkosten betalen Het totaalbedrag komt op €"+totaalbedrag+"");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
