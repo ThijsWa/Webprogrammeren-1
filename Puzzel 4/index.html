@@ -8,11 +8,11 @@
 		var totaalbedrag = aankoopbedrag + 3.95;
 		var gratisverzenden = aankoopbedrag;
 
-		if (aankoopbedrag => 25) {
-			alert("De verzendkosten zijn gratis. Het totaalbedrag komt op €"+gratisverzenden+"");
-		}
 		if (aankoopbedrag < 25) {
 			alert("U moet verzendkosten betalen Het totaalbedrag komt op €"+totaalbedrag+"");
+		}
+		else {
+			alert("De verzendkosten zijn gratis. Het totaalbedrag komt op €"+gratisverzenden+"");
 		}
 	</script>
 </head>
