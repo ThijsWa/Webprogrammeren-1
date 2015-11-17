@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Puzzel 2</title>
+
+	<script>
+	function berekenBMI(){
+		var gewicht = prompt("Wat is uw gewicht?");
+		var lengte = prompt("Wat is uw lengte?");
+		var berekening = gewicht / lengte * lengte;
+
+		if (berekening >= 30) {
+			alert("Een BMI van " + berekening + " is te veel")
+		}
+		else {
+			alert("Een BMI van " + bmi + " is uitstekend")
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<button onclick="berekenBMI()">Bereken BMI</button>
+</body>
+</html>
+
+
+
+
+<!-- Opgave 2: BMI berekenen
+Gebruik voor deze puzzel de volgende formulier: https://nl.wikipedia.org/wiki/Queteletindex 
+
+1.	Maak een functie genaamd berekenBMI()
+2.	Maak een <button> die de functie berekenBMI() aanroept
+3.	Vraag via de prompt() de benodigde waarden (zie Wikipedia pagina)
+4.	Geef terug aan de gebruiker via een alert()of de gebruiker overgewicht heeft
+ -->
