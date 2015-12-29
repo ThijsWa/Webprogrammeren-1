@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<meta charset="UTF-8">
 	<title>Puzzel 1</title>
 
 	<script>
-	function vergelijkWoorden(){
-		var woord1 = prompt(woord1).length;
-		var woord2 = prompt(woord2).length;
+		$(document).ready(function(){
 
-		if (woord1 > woord2) {
-			alert(""+woord1+ +woord2+"")
-		}
-		else {
-			alert(""+woord1+ "Kleiner")
-		}
-	}
+			$('#button').click(function(){
+
+				var woord1 = $('#woord1').val();
+				var woord2 = $('#woord2').val();
+
+
+				if (woord1 > woord2) {
+					$('#field').text("Woord 1 bestaat uit "+woord1.length+" letters en is daarom langer.")
+				};
+				if (woord1 < woord2) {
+					$('#field').text("Woord 2 bestaat uit "+woord2.length+" letters en is daarom langer.")
+				}
+				if (woord1 == woord2){
+					$('#field').text("De lengte van de woorden zijn gelijk aan elkaar.")
+				}
+
+			});
+		});
+
 
 	</script>
 </head>
 <body>
-	<button onclick="vergelijkWoorden()">vergelijken</button>
+	Woord 1 <br>
+	<input type="text" id="woord1" placeholder="Woord 1">
+	<br><br>
+	Woord 2<br>
+	<input type="text" id="woord2" placeholder="Woord 2">
+	<button id="button">Vergelijken</button>
+	<p id="field"></p>
 </body>
 </html>

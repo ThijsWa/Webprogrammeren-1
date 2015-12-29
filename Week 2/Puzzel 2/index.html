@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<meta charset="UTF-8">
 	<title>Puzzel 2</title>
 
 	<script>
-	function berekenBMI(){
-		var gewicht = prompt("Wat is uw gewicht?");
-		var lengte = prompt("Wat is uw lengte?");
-		var berekening = gewicht / lengte * lengte;
+		$(document).ready(function(){
 
-		if (berekening >= 30) {
-			alert("Een BMI van " + berekening + " is te veel")
-		}
-		else {
-			alert("Een BMI van " + bmi + " is uitstekend")
-		}
-	}
+			$('#lengte, #gewicht').keyup(function(){
+
+				var lengte = parseInt($('#lengte').val(), 10);
+				var gewicht = parseInt($('#gewicht').val(), 10);
+				var berekening = gewicht / (lengte / 100 * lengte / 100);
+
+				if (berekening > 30) {
+					$('#field').text("Een BMI van " +berekening+ " is te veel");
+				} else if (berekening < 10) {
+					$('#field').text("Een BMI van " +berekening+ " is te laag");
+				}
+				else {
+					$('#field').text("Een BMI van " +berekening+ " is uitstekend");
+				}
+
+			});
+		});
+
 
 	</script>
 </head>
 <body>
-	<button onclick="berekenBMI()">Bereken BMI</button>
+	Lengte<br>
+	<input type="text" id="lengte" placeholder="Uw lengte (in CM)">
+	<br><br>
+	Gewicht<br>
+	<input type="text" id="gewicht" placeholder="Uw gewicht (in KG)">
+	<p id="field"></p>
 </body>
 </html>
-
-
-
-
-<!-- Opgave 2: BMI berekenen
-Gebruik voor deze puzzel de volgende formulier: https://nl.wikipedia.org/wiki/Queteletindex 
-
-1.	Maak een functie genaamd berekenBMI()
-2.	Maak een <button> die de functie berekenBMI() aanroept
-3.	Vraag via de prompt() de benodigde waarden (zie Wikipedia pagina)
-4.	Geef terug aan de gebruiker via een alert()of de gebruiker overgewicht heeft
- -->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Puzzel 2</title>
+
+	<script>
+
+		function inloggen(){
+
+			document.getElementById("gebruikersnaam-field").innerHTML = ("");
+			document.getElementById("wachtwoord-field").innerHTML = ("");
+
+			var gebruikersnaam = myForm.elements["gebruikersnaam"].value;
+			var wachtwoord = myForm.elements["wachtwoord"].value;
+			var counter = 0;
+
+			if (gebruikersnaam == "mike" && wachtwoord == "mike") {
+				//document.getElementById("succes-field").innerHTML = ("U bent ingelogd.");
+				window.location.href="http://www.mikevanelk.nl";
+			}
+
+			else {
+				document.getElementById("succes-field").innerHTML = ("Gebruikersnaam of wachtwoord onjuist.");
+			}
+
+			if (gebruikersnaam == null || gebruikersnaam == "") {
+                document.getElementById("gebruikersnaam-field").innerHTML = ("Voer een gebruikersnaam in.");
+                return false;
+            }
+            if (wachtwoord == null || wachtwoord == "") {
+                document.getElementById("wachtwoord-field").innerHTML = ("Voer een wachtwoord in.");
+                return false;
+            }
+            counter++;
+            if (counter === 3) {
+            	 alert("Access Denied!");
+            };
+		}
+
+	</script>
+</head>
+<body>
+
+
+	<form name="form" id="myForm" action="">
+		Woord 1: <br />
+		<input type="text" name="gebruikersnaam"> </br>
+		<div id="gebruikersnaam-field"></div>
+		<br />
+		Woord 2: <br />
+		<input type="password" name="wachtwoord"> </br>
+		<div id="wachtwoord-field"></div>
+	</form>
+	<br />
+	<button onclick="inloggen()">Inloggen</button>
+	<div id="succes-field"></div>
+
+
+</body>
+</html>

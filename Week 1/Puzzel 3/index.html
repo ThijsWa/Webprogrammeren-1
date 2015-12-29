@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Puzzel 3</title>
 	<script>
-		var team1 = prompt("Wat is de score van team 1");
-		var team2 = prompt("Wat is de score van team 2");
+		$(document).ready(function(){
 
-		if (team1 < team2) {
-			alert("team 1");
-		};
-		if (team1 > team2){
-			alert("team 2");
 
-		};
-		if (team1 === team2) {
-			alert("Het is gelijk spel!");
-		};
+
+			$('#button').click(function(){
+
+				var team1 = $('#team1').val();
+				var team2 = $('#team2').val();
+
+				if (team1 > team2) {
+					$('#field').text('Team 1 heeft gewonnen!');
+				} 
+
+				if (team1 < team2){
+					$('#field').text('Team 2 heeft gewonnen!');
+				};
+				if (team1 === team2) {
+					$('#field').text('Het is gelijk spel!');
+				};
+			});
+
+		});
+
+
 	</script>
 </head>
 <body>
-	
+	Team 1 <br>
+	<input type="text" id="team1" placeholder="Wat is de score van Team 1">
+	<br><br>
+	Team 2<br>
+	<input type="text" id="team2" placeholder="Wat is de score van Team 2">
+	<button id="button">Check</button>
+	<p id="field"></p>
 </body>
 </html>

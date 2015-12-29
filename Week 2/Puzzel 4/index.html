@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 	<meta charset="UTF-8">
-	<title>Puzzel 2</title>
+	<title>Puzzel 4</title>
 
 	<script>
-	function lengtewoord(){
-		var woord = parseInt(prompt("Geef het woord op")).lenght;
+		$(document).ready(function(){
 
-		if (wachtwoord === wachtwoordControle) {
-			alert("ja")
-		}
-		else {
-			alert("nee")
-		}
-	}
+			$('#field').text('');
 
-	vergelijkWachtwoord();
+			$('#button').click(function(){
+				var woord1 = $('#woord1').val();
+				var woord2 = $('#woord2').val();
 
-	</script>
-</head>
-<body>
-</body>
-</html>
 
-Opgave 4: Welk woord is langer? – part 2
+				if (woord1 > woord2) {
+					$('#field').text('Woord 1 is langer dan woord 2');
+				}
+				if (woord1 < woord2){
+					$('#field').text('Woord 2 is langer dan woord 1');
+				}
+				if (woord1 == woord2){
+					$('#field').text('Woord 1 en woord 2 zijn gelijk aan elkaar');
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+
+		<form name="form" action="" id="form">
+			Woord 1: <input type="text" id="woord1" value="" size="5"> </br>
+			Woord 2: <input type="text" id="woord2" value="" size="5"> </br>
+		</form>
+		</br>
+		<button id="button">Vergelijken</button>
+			<p id="field"></p>
+
+
+
+
+
+	</body>
+	</html>
+
+<!-- Opgave 4: Welk woord is langer? – part 2
 1.	Bij opgave 1 heb je een functie gemaakt om de lengte van een woord te berekenen.
 2.	Maak nu een formulier en gebruik jouw functie
 3.	Schrijf het resultaat op het scherm in bijvoorbeeld een <p>
+ -->

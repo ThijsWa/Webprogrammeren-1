@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<meta charset="UTF-8">
+	<title>Puzzel 4</title>
+	<script>
+		$(document).ready(function(){
+			
+			$('#button').click(function(){
+
+				// var resultaat = [,,,,.5,],
+				// gemiddelde = $.inArray(lotnummer, resultaat);
+
+				var i;
+				var cijfer = new Array();
+
+				cijfer[0] = "8", 20;
+				cijfer[1] = "6", 20;
+				cijfer[2] = "7", 20;
+				cijfer[3] = "6", 20;
+				cijfer[4] = "6.5", 20;
+				cijfer[5] = "7.5", 50;
+
+
+				var sum = 0;
+				for( var i = 0; i < cijfer.length; i++ ){
+				    sum += parseInt( cijfer[i], 10 ); //don't forget to add the base
+				}
+
+				var avg = sum/cijfer.length;
+
+				$('#field').text("The sum of all the elements is: " + sum + " The average is: " + avg );
+
+
+			});
+		});
+		
+	</script>
+</head>
+<body>
+
+	<button id="button">Geef het eindcijfer</button><br>
+	<p id="field"></p>
+</body>
+</html>

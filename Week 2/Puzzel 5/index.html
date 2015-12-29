@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<meta charset="UTF-8">
+	<title>Puzzel 5</title>
+
+	<script>
+		$(document).ready(function(){
+
+			$('#field').text('');
+
+			$('#dollar, #peso, #yen, #pond').keyup(function(){
+
+				var dollar 	= $('#dollar').val() * 1.08;
+				var peso 	= $('#peso').val() * 18.06;
+				var yen 	= $('#yen').val() * 132.04;
+				var pond 	= $('#pond').val() * 0.71;
+
+
+				$('#dollarField').text(+dollar+' Amerikaanse Dollar');
+				$('#pesoField').text(+peso+' Mexicaanse Peso');
+				$('#yenField').text(+yen+' Japanse Yen');
+				$('#pondField').text(+pond+' Britse Pond');
+
+			});
+		});
+	</script>
+</head>
+<body>
+
+
+	<form name="form" action="" id="form">
+		Van euro naar Amerikaanse Dollar</br>
+		<input type="text" id="dollar" value="" size="5"><p id="dollarField"></p>
+		
+		Van euro naar Mexicaanse Peso</br>
+		<input type="text" id="peso" value="" size="5"><p id="pesoField"></p>
+		
+		Van euro naar Japanse Yen</br>
+		<input type="text" id="yen" value="" size="5"><p id="yenField"></p>
+
+		Van euro naar Britse Pond</br>
+		<input type="text" id="pond" value="" size="5"><p id="pondField"></p>
+	</form>
+
+
+</body>
+</html>

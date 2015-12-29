@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Puzzel 4</title>
 	<script>
-		var aankoopbedrag = parseInt(prompt("Wat is het aankoopbedrag?"));
-		var totaalbedrag = aankoopbedrag + 3.95;
-		var gratisverzenden = aankoopbedrag;
+		$(document).ready(function(){
 
-		if (aankoopbedrag < 25) {
-			alert("U moet verzendkosten betalen Het totaalbedrag komt op €"+totaalbedrag+"");
-		}
-		else {
-			alert("De verzendkosten zijn gratis. Het totaalbedrag komt op €"+gratisverzenden+"");
-		}
+
+			$('#button').click(function(){
+
+
+				var aankoopbedrag = parseInt($('#aankoopBedrag').val());
+				var totaalbedrag = aankoopbedrag + 3.95;
+				var gratisverzenden = aankoopbedrag;
+
+				if (aankoopbedrag < 25) {
+					$('#field').text('U moet verzendkosten betalen. Het totaalbedrag komt op € '+totaalbedrag+'');
+				}
+				
+				else {
+					$('#field').text('De verzendkosten zijn gratis. Het totaalbedrag komt op € '+gratisverzenden+'');
+				}
+
+			});
+
+		});
+
 	</script>
 </head>
 <body>
-	
+	Wat is het aankoopbedrag? <br>
+	<input type="text" id="aankoopBedrag" placeholder="Het aankoopbedrag is..">
+	<br>
+	<button id="button">Check</button>
+	<p id="field"></p>
 </body>
 </html>

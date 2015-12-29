@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<meta charset="UTF-8">
-	<title>Puzzel 2</title>
+	<title>Puzzel 3</title>
 
 	<script>
-	function vergelijkWachtwoord(){
-		var wachtwoord = prompt("Uw wachtwoord");
-		var wachtwoordControle = prompt("Herhaal uw wachtwoord");
+		$(document).ready(function(){
 
-		if (wachtwoord === wachtwoordControle) {
-			alert("ja")
-		}
-		else {
-			alert("nee")
-		}
-	}
+			$('#field').text('');
 
-	vergelijkWachtwoord();
+			$('#button').click(function(){
+
+				var wachtwoord = $('#wachtwoord').val();
+				var wachtwoordHerhaal = $('#wachtwoordHerhaal').val();
+				var wachtwoordControle = wachtwoord === wachtwoordHerhaal;
+
+				if (wachtwoordControle) {
+					$('#field').text('De wachtwoorden zijn gelijk aan elkaar');
+				}
+				else {
+					$('#field').text('De wachtwoorden zijn ongelijk aan elkaar');
+				}
+
+
+			});
+		});
 
 	</script>
 </head>
 <body>
+
+
+	Wachtwoord<br>
+	<input type="text" id="wachtwoord" placeholder="Uw wachtwoord">
+	<br><br>
+	Herhaal wachtwoord<br>
+	<input type="text" id="wachtwoordHerhaal" placeholder="Hethaal uw wachtwoord">
+	<button id="button">Vergelijken</button>
+	<p id="field"></p>
+
+
 </body>
 </html>
-
-<!-- Opgave 3: Is het wachtwoord hetzelfde?
-1.	Maak een functie genaamd vergelijkWachtwoord met twee parameters
-2.	Maak twee variabelen aan en gebruik deze als parameter
-3.	In de functie vergelijkWachtwoord, vergelijk je het wachtwoord
-4.	Geef met een alert terug op het klopt
- -->
