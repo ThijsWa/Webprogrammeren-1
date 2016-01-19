@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Het Zorgportaal | Tijdline | Samen voor een betere zorg</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/messages.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/popup.css" rel="stylesheet" type="text/css">
+	<script>
+
+
+
+
+	</script>
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="logo">
+				<a href="timeline.html">Het <span class="primary-color">Zorg</span><span class="secondary-color">portaal</span></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="timeline.html">Home</a></li>
+					<li><a href="patienten.html">Patiënten</a></li>
+					<li><a href="berichten.html" class="active">Berichten</a></li>
+
+
+					
+				</ul>
+			</nav>
+			<nav class="user">
+				<ul>
+					<li>Welkom Mike van Elk</li>
+					<li><a href="index.html">Uitloggen</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<div class="wrapper">
+		<aside class="left">
+			<div class="patients">
+				<h3>Uw patiënten</h3>
+				<ul>
+					<li><a href="patienten.html">Mike van Elk</a></li>
+					<li><a href="patienten.html">Kees de Koning</a></li>
+					<li><a href="patienten.html">Jan Smith</a></li>
+					<li><a href="patienten.html">Dominique van Grootveld</a></li>
+					<li><a href="patienten.html">Robertus Cavali</a></li>
+					<li><a href="patienten.html">Henk Groot</a></li>
+					<li><a href="patienten.html">Thomas Klein</a></li>
+					<li><a href="patienten.html">Bekijk al uw patienten</a></li>
+				</ul>
+			</div>
+			<div class="current-patient">
+				<div class="user-photo"><img src="images/user_male_2.png" height="100" alt="Image preview..."></div>
+				<h3>Dhr. Mike van Elk</h3>
+				<span>nr. 302910239</span>
+				<ul>
+					<li>Mike van Elk</li>
+				</ul>
+				<form id="form1" runat="server">
+					<input type='file' class="custom-file-input" onchange="readURL(this);" />
+				</form>
+			</div>
+		</aside>
+
+		<section>
+			<div class="timeline">
+
+				<div class="timeline-top">
+					<span class="single">Uw gesprekken</span>
+				</div>
+				<div class="timeline-posts messageslist">
+					<ul class="messagelist">
+						<li>
+							<div class="timeline-post messagelistitem message_berichten online">
+								<img src="images/user_male_1.png" alt="">
+								<h3>Madison Daniels</h3>
+							</div>
+						</li>
+						<li>
+							<div class="timeline-post messagelist message_berichten  online">
+								<img src="images/user_male_3.png" alt="">
+								<h3>Madison Daniels</h3>
+
+							</div>
+						</li>
+						<li class="current">
+							<div class="timeline-post messagelist message_berichten offline">
+								<img src="images/user_male_2.png" alt="">
+								<h3>Madison Daniels</h3>
+
+							</div>
+						</li>
+						<li>
+							<div class="timeline-post messagelist message_berichten online">
+								<img src="images/user_female_1.png" alt="">
+								<h3>Madison Daniels</h3>
+
+							</div>
+						</li>
+						<li>
+							<div class="timeline-post messagelist message_berichten offline">
+								<img src="images/user_male_3.png" alt="">
+								<h3>Madison Daniels</h3>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</section>
+		<aside class="right">
+			<div class="messages">
+				<article class="message messageleft"><img id="open-photo" src="images/hartfilmpje.jpg" alt="hartfilmpje"><p>Ok mooi, hoe laat kan ik bij u komen? Hierbij een foto van mijn hartfilmpje.</p></article>
+				<article class="message messageright"><p>Onze afspraak staat om 15:00 uur meneer De Koning.</p></article>
+				<article class="message messageleft"><p>Fijn om te horen dat ik zo snel bij u terrect kon! Ik krijg namelijk steeds meer last van mijn hart..</p></article>
+				<article class="message messageright"><img id="open-video" src="images/vakantiefilmpje.jpg" alt="vakantie"><p>Het lijkt mij een goed idee als u eventjes met vakantie gaat meneer.</p></article>
+			</div>
+			
+
+			<div id="messagebox">
+				<span>Laast gezien om: <strong>16:44</strong></span>
+				<form class="messageform">
+					<div class="textarea">
+						<textarea type="text" id="message" name="message" placeholder="Typ een bericht"></textarea>
+						<br>
+					</div>
+				</form>
+				<button id="addMessageButton">Plaats</button>
+				<span id="errorTimeline"></span>	
+			</div>
+
+
+		</aside>
+	</div>
+</body>
+</html>

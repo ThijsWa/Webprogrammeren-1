@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Het Zorgportaal | Tijdline | Samen voor een betere zorg</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/timeline.js"></script>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+	<script>
+
+
+
+
+	</script>
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="logo">
+				<a href="timeline.html">Het <span class="primary-color">Zorg</span><span class="secondary-color">portaal</span></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="timeline.html" class="active">Home</a></li>
+					<li><a href="patienten.html">Patiënten</a></li>
+					<li><a href="berichten.html">Berichten</a></li>
+
+
+					
+				</ul>
+			</nav>
+			<nav class="user">
+				<ul>
+					<li>Welkom Mike van Elk</li>
+					<li><a href="index.html">Uitloggen</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<div class="wrapper">
+		<aside class="left">
+			<div class="patients">
+				<h3>Uw patiënten</h3>
+				<ul>
+					<li><a href="patienten.html">Mike van Elk</a></li>
+					<li><a href="patienten.html">Kees de Koning</a></li>
+					<li><a href="patienten.html">Jan Smith</a></li>
+					<li><a href="patienten.html">Dominique van Grootveld</a></li>
+					<li><a href="patienten.html">Robertus Cavali</a></li>
+					<li><a href="patienten.html">Henk Groot</a></li>
+					<li><a href="patienten.html">Thomas Klein</a></li>
+					<li><a href="patienten.html">Bekijk al uw patienten</a></li>
+				</ul>
+			</div>
+			<div class="current-patient">
+				<div class="user-photo"><img src="images/user_male_2.png" height="100" alt="Image preview..."></div>
+				<h3>Dhr. Mike van Elk</h3>
+				<span>nr. 302910239</span>
+				<ul>
+					<li>Mike van Elk</li>
+				</ul>
+				<form id="form1" runat="server">
+					<input type='file' class="custom-file-input" onchange="readURL(this);" />
+				</form>
+			</div>
+		</aside>
+
+		<section>
+			<div class="timeline">
+				<div class="timeline-top">
+					<span><a href="#" class="active">Timeline</a></span>
+					<span><a href="#">Profiel</a></span>
+					<span><a href="#">Inbox</a></span>
+					<span><a href="#">Medicatie</a></span>
+					<span><a href="#">Aantekeningen</a></span>
+				</div>
+				<div class="timeline-posts">
+					<div class="timeline-post">
+						<img src="images/user_male_1.png" alt="">
+						<h3>Madison Daniels</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel tellus lobortis..</p>
+						<span><a class="likeButton">Vind ik leuk</a><a class="reagerenButton">Reageren</a></span>
+						<div class="likeField" style="display:none;"><a href="">Dhr Mike van Elk</a> vind dit leuk.</div>
+						<div class="reagerenField" style="display:none;">
+							<div class="hoi"></div>
+							<img src="images/user_male_2.png" alt="">
+							<textarea type="text" class="addCommentOnPost" name="add-posts" placeholder="Schrijf een reactie..."></textarea>
+						</div>
+					</div>
+					<div class="timeline-post">
+						<img src="images/user_male_3.png" alt="">
+						<h3>Madison Daniels</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel tellus lobortis..</p>
+						<span><a class="likeButton">Vind ik leuk</a><a class="reagerenButton">Reageren</a></span>
+						<div class="likeField" style="display:none;"><a href="">Dhr Mike van Elk</a> vind dit leuk.</div>
+						<div class="reagerenField" style="display:none;">
+							<div class="hoi"></div>
+							<img src="images/user_male_2.png" alt="">
+							<textarea type="text" class="addCommentOnPost" name="add-posts" placeholder="Schrijf een reactie..."></textarea>
+						</div>
+					</div>
+					<div class="timeline-post">
+						<img src="images/user_male_2.png" alt="">
+						<h3>Madison Daniels</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel tellus lobortis..</p>
+						<span><a class="likeButton">Vind ik leuk</a><a class="reagerenButton">Reageren</a></span>
+						<div class="likeField" style="display:none;"><a href="">Dhr Mike van Elk</a> vind dit leuk.</div>
+						<div class="reagerenField" style="display:none;">
+							<img src="images/user_male_2.png" alt="">
+							<textarea type="text" class="addCommentOnPost" name="add-posts" placeholder="Schrijf een reactie..."></textarea>
+						</div>
+					</div>
+					<div class="timeline-post">
+						<img src="images/user_female_1.png" alt="">
+						<h3>Madison Daniels</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel tellus lobortis..</p>
+						<span><a class="likeButton">Vind ik leuk</a><a class="reagerenButton">Reageren</a></span>
+						<div class="likeField" style="display:none;"><a href="">Dhr Mike van Elk</a> vind dit leuk.</div>
+						<div class="reagerenField" style="display:none;">
+							<img src="images/user_male_2.png" alt="">
+							<textarea type="text" class="addCommentOnPost" name="add-posts" placeholder="Schrijf een reactie..."></textarea>
+						</div>
+					</div>
+					<div class="timeline-post">
+						<img src="images/user_male_3.png" alt="">
+						<h3>Madison Daniels</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel tellus lobortis..</p>
+						<span><a class="likeButton">Vind ik leuk</a><a class="reagerenButton">Reageren</a></span>
+						<div class="likeField" style="display:none;"><a href="">Dhr Mike van Elk</a> vind dit leuk.</div>
+						<div class="reagerenField" style="display:none;">
+							<img src="images/user_male_2.png" alt="">
+							<textarea type="text" class="addCommentOnPost" name="add-posts" placeholder="Schrijf een reactie..."></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="timeline-add-post">
+					<div id="messagebox">
+						<form class="add-post">
+							<div class="textarea">
+								<textarea type="text" id="addTimelineArea" name="add-posts" placeholder="Wat is de laatste update?"></textarea>
+								<br>
+							</div>
+						</form>
+						<button id="addTimelinePostButton">Plaats</button>
+						<span id="errorTimeline"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
